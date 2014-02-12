@@ -2,7 +2,8 @@
 <html>
 <head>
     <title>Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+    <meta charset="utf-8">
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= csrf_meta_tags %>
 
@@ -12,15 +13,17 @@
 </head>
 
 <body>
-    <%=render 'layouts/header'%>
-    <% flash.each do |key, value|%>
-        <div class="alert alert-<%= key %>"><%= value %> </div>
-    <% end %>
+    <div class="container-fluid"> </div>
+        <%=render 'layouts/header'%>
+        <% flash.each do |key, value|%>
+            <div class="alert alert-<%= key %>"><%= value %> </div>
+        <% end %>
 
-    <%= yield %>
+        <%= yield %>
 
-    <%=render 'layouts/footer'%>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-      <script src="https://code.jquery.com/jquery.js"></script>
+        <%=render 'layouts/footer'%>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+          <script src="https://code.jquery.com/jquery.js"></script>
+    </div>
 </body>
 </html>
