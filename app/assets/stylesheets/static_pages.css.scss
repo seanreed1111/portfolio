@@ -4,10 +4,14 @@
 
 @import "/bootstrap/3.1.0/css/bootstrap.min.css";
 
-body{
+body {
     background: url("/images/RenoBalloonRace.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover; 
     background-size: cover;
+}
+
+.navbar {
+    background:transparent;
 }
